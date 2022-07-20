@@ -46,10 +46,17 @@ public class LineComparision {
 		System.out.println(" Length of the line CD is " + lengthOfLineCD);
 	    
 		/*
-		 * 		checking equality of length of lines AB & CD using equals method
+		 * 		comparing of length of lines AB & CD using compareTo method
 		 */
 		
-	    System.out.println("\n Length of lines AB & CD are equal : " + lengthOfLineAB.equals(lengthOfLineCD) );
+		int result = lengthOfLineAB.compareTo(lengthOfLineCD);
+		
+		if (result == -1) {
+			System.out.println("\n Length of line AB is less than line CD");
+		} else if (result == 1) {
+			System.out.println("\n Length of line AB is greater than line CD");
+		} else
+			System.out.println("\n Length of lines AB & CD are equal");
 
 		
 scan.close();
